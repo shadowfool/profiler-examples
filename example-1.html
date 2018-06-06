@@ -1,0 +1,17 @@
+<html>
+<button id="myButton"> Click me!!!!! </button>
+<script>
+
+	const expandingObject = {};
+	document.getElementById("myButton").addEventListener("click", () => {
+		i = 0;
+		// Creates bigger and bigger empty arrays in this global object.
+		// A lesson in getting rid of unused data stored in upper scopes. 
+		setInterval( () => {
+			expandingObject[ i.toString() ] = new Array( i );
+			i++;
+		}, 20);
+	});
+
+</script>
+</html>

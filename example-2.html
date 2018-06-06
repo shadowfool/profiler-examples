@@ -1,0 +1,28 @@
+<html>
+<button id="myButton"> Click me!!!!! </button>
+<h1 id="tomato" style="background-color:Tomato;">Tomato</h1>
+<script>
+
+	const randomObject = {
+		"foo": "bar"
+	};
+	document.getElementById("myButton").addEventListener("click", () => {
+		document.getElementById("myButton").remove();
+		var theThing = null;
+		var replaceThing = function () {
+		  var originalThing = theThing;
+		  var unused = function () {
+		  	// since original thing is scoped here the function is not GC'd.
+		    if (originalThing){
+		    	//nothing
+		    }
+		  };
+		  theThing = {
+		    longStr: new Array(1000000).join('*');
+		  };
+		};
+		setInterval(replaceThing, 1000);
+	});
+
+</script>
+</html>
