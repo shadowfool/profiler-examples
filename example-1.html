@@ -8,7 +8,7 @@
 		// Creates bigger and bigger empty arrays in this global object.
 		// A lesson in getting rid of unused data stored in upper scopes. 
 		setInterval( () => {
-			expandingObject[ i.toString() ] = new Array( i );
+			expandingObject[ i.toString() ] = new Array( i ).fill('You found me!');
 			i++;
 		}, 20);
 	});
