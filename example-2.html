@@ -1,11 +1,11 @@
 <html>
-<button id="myButton"> Click me!!!!! </button>
-<h1 id="tomato" style="background-color:Tomato;">Tomato</h1>
+<button id="myButton"  style="background-color:Tomato;"> Click me!!!!! </button>
 <script>
 
 	const randomObject = {
 		"foo": "bar"
 	};
+
 	document.getElementById("myButton").addEventListener("click", () => {
 		document.getElementById("myButton").remove();
 		var theThing = null;
@@ -18,7 +18,7 @@
 		    }
 		  };
 		  theThing = {
-		    longStr: new Array(1000000).join('*');
+		    longStr: new Array(1000000).join('*')
 		  };
 		};
 		setInterval(replaceThing, 1000);
